@@ -2,6 +2,12 @@
 
 WASM Tools is a collection of useful tools for working with WASM and its accompanying text format, WAT, in JavaScript. The tools are based on [esbuild](https://esbuild.github.io) and [wabt](https://github.com/WebAssembly/wabt).
 
+## Installation
+
+```sh
+npm install wasm-tools
+```
+
 ## Tools
 
 ### `wasm-to-js` (alias `wat-to-js`)
