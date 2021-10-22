@@ -6,8 +6,8 @@
   "bin": {
     "wasm-to-js": "./bin/wasm-to-js.js",
     "wasm-to-wat": "./bin/wasm-to-wat.js",
-    "wat-to-js": "./bin/wat-to-wat.js",
-    "wat-to-wasm": "./bin/wat-to-wat.js"
+    "wat-to-js": "./bin/wat-to-js.js",
+    "wat-to-wasm": "./bin/wat-to-wasm.js"
   },
   "scripts": {
     "test": "standard && brittle test/*.mjs"
