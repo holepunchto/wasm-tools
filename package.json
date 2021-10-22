@@ -1,0 +1,35 @@
+{
+  "name": "wasm-tools",
+  "version": "0.0.0",
+  "description": "A collection of useful tools for working with WASM/WAT in JavaScript",
+  "main": "index.js",
+  "bin": {
+    "wasm-to-js": "./bin/wasm-to-js.js",
+    "wasm-to-wat": "./bin/wasm-to-wat.js",
+    "wat-to-js": "./bin/wat-to-wat.js",
+    "wat-to-wasm": "./bin/wat-to-wat.js"
+  },
+  "scripts": {
+    "test": "standard && brittle test/*.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypercore-skunkworks/wasm-tools.git"
+  },
+  "author": "Kasper Isager Dalsgarð <kasper@funktionel.co>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hypercore-skunkworks/wasm-tools/issues"
+  },
+  "homepage": "https://github.com/hypercore-skunkworks/wasm-tools#readme",
+  "dependencies": {
+    "b4a": "^1.0.0",
+    "commander": "^8.3.0",
+    "esbuild": "^0.13.8",
+    "wabt": "^1.0.24"
+  },
+  "devDependencies": {
+    "brittle": "^1.3.5",
+    "standard": "^16.0.3"
+  }
+}
