@@ -2,7 +2,6 @@ module.exports = (options = {}) => {
   return {
     name: 'wasm',
     setup (build) {
-      const path = require('path')
       const { readWASM } = require('../lib/read-wasm.js')
       const { readWAT } = require('../lib/read-wat.js')
 
@@ -14,12 +13,8 @@ module.exports = (options = {}) => {
           }
         }
 
-        if (args.resolveDir === '') {
-          return
-        }
-
         return {
-          path: path.isAbsolute(args.path) ? args.path : path.join(args.resolveDir, args.path),
+          path: args.path,
           namespace: 'wasm-module'
         }
       })
