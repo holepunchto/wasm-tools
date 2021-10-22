@@ -31,13 +31,17 @@ module.exports = (options = {}) => {
             ${options.sync
               ? `
                 const compiled = new WebAssembly.Module(bytes)
-                module.exports = (imports) =>
-                  new WebAssembly.Instance(compiled, imports)
+                module.exports = (imports) => {
+                  const instance = new WebAssembly.Instance(compiled, imports)
+                  return instance.exports
+                }
                 `
               : `
                 const compiled = WebAssembly.compile(bytes)
-                module.exports = async (imports) =>
-                  WebAssembly.instantiate(await compiled, imports)
+                module.exports = async (imports) => {
+                  const instance = await WebAssembly.instantiate(await compiled, imports)
+                  return instance.exports
+                }
                 `
             }
           `
