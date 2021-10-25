@@ -24,6 +24,9 @@ program
   .addOption(
     createOption('-m, --minify', 'minify the the resulting module')
   )
+  .addOption(
+    createOption('--force', 'bypass size limit checks')
+  )
   .action(action)
   .parseAsync()
   .catch(err => {
@@ -42,6 +45,6 @@ async function action (file, options) {
     platform: options.platform,
     format: options.format,
     minify: options.minify,
-    plugins: [wasm({ sync: options.sync })]
+    plugins: [wasm({ sync: options.sync, force: options.force })]
   })
 }
