@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/hypercore-skunkworks/wasm-tools#readme",
   "dependencies": {
-    "b4a": "^1.0.0",
     "commander": "^8.3.0",
     "esbuild": "^0.13.8",
     "wabt": "^1.0.24"
